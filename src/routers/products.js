@@ -1,5 +1,6 @@
 import express from 'express';
 import Product from '../models/product';
+import Category from '../models/category';
 const router = express.Router();
 
 router.get('/', async (req, res) => {

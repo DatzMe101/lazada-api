@@ -1,9 +1,11 @@
 import express from 'express';
 import mongoose from 'mongoose';
+import cors from 'cors';
 import products from './routers/products';
 import categories from './routers/categories';
 
 const app = express();
+app.use(cors());
 app.use(express.json());
 app.use('/api/products', products);
 app.use('/api/categories', categories);
