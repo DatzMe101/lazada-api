@@ -6,14 +6,7 @@ import categories from './routers/categories';
 const app = express();
 app.use(express.json());
 app.use('/api/products', products);
-app.use('/api/categories', products);
-
-// const categorySchema = new mongoose.Schema({
-//   name: { type: String, require: true },
-//   description: { type: String, require: true },
-// });
-
-// const Category = mongoose.model('Category', categorySchema);
+app.use('/api/categories', categories);
 
 const connectToDB = async () => {
   try {
